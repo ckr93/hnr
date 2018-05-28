@@ -1,0 +1,12 @@
+{% extends 'application/base.html' %}
+
+{% block body %}
+    <h1>Search Page</h1><br>
+
+
+    <input type="text" value="" placeholder="Job Title" id=id_job_title" name="job title"/>
+
+    <a href="{% url 'application:search_result' %}" class="btn btn-info" role="button">Search</a><br><br><br>
+    </form>
+
+{% endblock %}

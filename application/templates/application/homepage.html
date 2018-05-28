@@ -1,0 +1,9 @@
+{% extends 'application/base.html' %}
+
+{% block body %}
+    <h1>HomePage</h1><br>
+
+    <a href="{% url 'application:search' %}" class="btn btn-info" role="button">New Search</a><br><br><br>
+    <a href="{% url 'application:last_search' %}" class="btn btn-info" role="button">View Last Search</a><br><br><br>
+    <a href="{% url 'application:manage_recruitments' %}" class="btn btn-info" role="button">Manage Recruitments</a>
+{% endblock %}
