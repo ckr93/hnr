@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^last_search/$', views.last_search, name='last_search'),
     url(r'^manage_recruitments/$', views.manage_recruitments, name='manage_recruitments'),
     url(r'^search_result/$', views.search_result, name='search_result'),
-
+    url(r'^form/$', views.form, name='form'),
+    url(r'^prediction/$', views.prediction, name='prediction'),
 ]

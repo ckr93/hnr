@@ -19,6 +19,13 @@ ol{
     margin: 0;
     padding: 0;
 }
+body {
+   	margin: 0;
+	padding: 0;
+	background: url('../images/back3.jpg');
+	background-size: cover;
+	font-family: sans-serif;
+}
 
 .main-container{
     width: 100%;
@@ -31,10 +38,15 @@ ol{
 }
 
 h1.title{
-       text-align: center;
+    text-align: center;
     font-size: 25px;
     padding: 50px 0 10px 0;
 
+}
+.logo h2{
+        text-align: center;
+        padding-top: 150px;
+        padding-bottom: 25px;
 }
 
 h2.description{
@@ -42,16 +54,11 @@ h2.description{
     font-size: 15px;
 }
 
-.index-left{
-    width: 50%;
-    float: left;
-     padding: 50px 50px;
-}
 
 .index-right{
-    width: 50%;
-    float: right;
-    padding: 50px 50px;
+    width: 100%;
+    float: left;
+
 }
 
 /*Login Block*/
@@ -66,6 +73,11 @@ h2.description{
 
 .login-block h1 {
     text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;    text-align: center;
     color: #000;
     font-size: 18px;
     text-transform: uppercase;
@@ -113,7 +125,7 @@ h2.description{
 .login-block button {
     width: 100%;
     height: 40px;
-    background: #20E4C0  ;
+    background: #20E4C0;
     box-sizing: border-box;
     border-radius: 5px;
     border: 1px solid #20E4C0  ;
@@ -138,3 +150,45 @@ a.button {
     text-decoration: none;
     color: initial;
 }
+
+.predict-fields{
+    float: left;
+    width: 100%;
+    padding-left: 425px;
+    padding-right: 425px;
+}
+
+footer {
+      background-color: black;
+      color: white;
+      padding: 15px;
+        position: fixed;
+    height: 40px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+       font-size: 10px;
+}
+
+.wrapper {
+    color: white;
+    text-align: center;
+}
+
+.loginBox
+    {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 420px;
+        padding: 20px 40px;
+        box-sizing: border-box;
+        background: rgba(0,0,0,.8);
+    }
+
+
+
+

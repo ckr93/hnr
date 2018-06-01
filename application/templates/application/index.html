@@ -14,35 +14,27 @@
 <div class="main-container">
     <div class="index-top">
         <h1 class="title">HNR</h1>
-        <h2 class="description">Your trusted soruce for recruitment</h2>
+        <h2 class="description">Your trusted source for recruitment</h2>
     </div>
-    <div class="index-left">
-        <input type="textbox">
-
+    <div class="logo">
+        <h2>Log-in to your account</h2>
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
     </div>
-    <div class="index-right">
-        <div class="logo">
-            <img>
-            <h2>Log-in to your account</h2>
-            {% if error_message %}
-                <p><strong>{{ error_message }}</strong></p>
-            {% endif %}
-
-
-        </div>
-        <div class="login-block">
-            <form class="form-horizontal" role="form" action="{% url 'application:login_user' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <input type="text" value="" placeholder="Username" id=id_username" name="username"/>
-                <input type="password" value="" placeholder="Password" id="id_password" name="password"/>
-                <button>Submit</button>
-            </form>
-        </div>
-        <div class="sign-up">
-            <button type="submit">New to us Sign Up</button>
-        </div>
-
+    <div class="login-block">
+        <form class="form-horizontal" role="form" action="{% url 'application:login_user' %}" method="post"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" value="" placeholder="Username" id=id_username" name="username"/>
+            <input type="password" value="" placeholder="Password" id="id_password" name="password"/>
+            <button>Submit</button>
+        </form>
     </div>
+{#    <div class="sign-up">#}
+{#        <button type="submit">New to us Sign Up</button>#}
+{#    </div>#}
+
 </div>
 
 </body>

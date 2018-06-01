@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '80r(0lv^^qy!98tiec6+5q6@5g9x*9071^97$q!uhjw0d_caj@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'hnr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hnr',
-        'USER': 'root',
+        'NAME': 'damdata',
+        'USER': 'kasunr',
         'PASSWORD': 'root123',
         'HOST': 'localhost',
-        'PORT': '3360'
+        'PORT': '33010'
     }
 }
 

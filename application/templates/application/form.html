@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'application/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'application/css/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse" id="navBar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="http://127.0.0.1:8000/application/home/">Home</a></li>
+        <li class="active"><a href="http://127.0.0.1:8000/application/prediction/">Predictor</a></li>
+        <li ><a href="http://127.0.0.1:8000/application/search/">Search</a></li>
+        <li ><a href="http://127.0.0.1:8000/application/manage_recruitments/">Recruitments management</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://127.0.0.1:8000/predictor/login/"> Logout  &nbsp; <span class="glyphicon glyphicon-user"></span> </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+
+
+    <h1 class="title">Predict Candidate Interest</h1><br>
+    <div class="predict-fields">
+        <form action="{% url 'application:prediction' %}" method="post">
+            {#            <div class="wrappernew">#}
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>Candidate Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label>Start Date of the current company</label>
+                <input type="text" class="form-control" name="org_1_start">
+            </div>
+            <div class="form-group">
+                <label>Designation</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            <div class="form-group">
+                <label>Proffessional Qualification</label>
+                <select class="form-control" id="education" name="education">
+                    <option value="1">College</option>
+                    <option value="2">Diploma</option>
+                    <option value="3">Bachelor's degree</option>
+                    <option value="4">Masters degree</option>
+                    <option value="5">Phd</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Years In Previous Company 1</label>
+                <input type="text" class="form-control" name="org_2">
+            </div>
+            <div class="form-group">
+                <label>Designation of the previous company 1</label>
+                <select class="form-control" id="org2_title" name="org2_title">
+                    <option value="1">Accountant</option>
+                    <option value="2">CEO</option>
+                    <option value="3">Software Engineer</option>
+                    <option value="4">Tech Lead</option>
+                    <option value="5">Project Manager</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Years In Previous Company 2</label>
+                <input type="text" class="form-control" name="org_3">
+            </div>
+            <div class="form-group">
+                <label>Designation of the previous company 2</label>
+                <select class="form-control" id="org3_title" name="org3_title">
+                    <option value="1">Accountant</option>
+                    <option value="2">CEO</option>
+                    <option value="3">Software Engineer</option>
+                    <option value="4">Tech Lead</option>
+                    <option value="5">Project Manager</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Years In Previous Company 3</label>
+                <input type="text" class="form-control" name="org_4">
+            </div>
+            <div class="form-group">
+                <label>Designation of the previous company 3</label>
+                <select class="form-control" id="org4_title" name="org4_title">
+                    <option value="1">Accountant</option>
+                    <option value="2">CEO</option>
+                    <option value="3">Software Engineer</option>
+                    <option value="4">Tech Lead</option>
+                    <option value="5">Project Manager</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Designation of the previous company 4</label>
+                <select class="form-control" id="org5_title" name="org5_title">
+                    <option value="1">Accountant</option>
+                    <option value="2">CEO</option>
+                    <option value="3">Software Engineer</option>
+                    <option value="4">Tech Lead</option>
+                    <option value="5">Project Manager</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Years In Previous Company4</label>
+                <input type="text" class="form-control" name="org_5">
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+            {#            </div>#}
+        </form>
+    </div>
+</div>
+</body>
+</html>
